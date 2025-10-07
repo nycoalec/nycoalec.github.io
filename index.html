@@ -3,135 +3,231 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KATAMI - Japanese Desserts</title>
+    <title>Nyco Alec B. Balaogan - BSIT Student | Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
-      :root {
-        --bg: #f7f5ef;
-        --surface: #ffffff;
-        --ink: #1e2328;
-        --muted: #687076;
-        --primary: #245b36;
-        --accent: #c46a2f;
-      }
-      html, body { height: 100%; }
       body {
-        background:
-          radial-gradient(1200px 600px at 80% -10%, #e1efe5 0%, transparent 60%),
-          radial-gradient(900px 600px at -10% 30%, #fff3e9 0%, transparent 55%),
-          var(--bg);
-        color: var(--ink);
-        font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
       }
-      h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', Georgia, serif; }
-
-      /* Glassy navbar */
+      
       .navbar {
-        background: rgba(255,255,255,0.7) !important;
-        backdrop-filter: saturate(140%) blur(10px);
-        -webkit-backdrop-filter: saturate(140%) blur(10px);
-        border-bottom: 1px solid rgba(0,0,0,0.06);
+        background: #4D9AB2 !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       }
+      
       .navbar-brand {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        color: var(--accent) !important;
-        letter-spacing: .5px;
+        color: white !important;
       }
-      .nav-link { color: var(--ink) !important; opacity: .8; }
-      .nav-link:hover { opacity: 1; }
-
-      /* Hero */
+      
+      .nav-link {
+        color: white !important;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      
+      .nav-link:hover {
+        color: #4DB298 !important;
+      }
+      
       .hero-section {
+        background: linear-gradient(135deg, #4D9AB2 0%, #4D67B2 100%);
         min-height: 100vh;
         display: flex;
         align-items: center;
-        padding-top: 84px; /* compensate for fixed navbar */
-      }
-      .hero-title {
-        line-height: 1.05;
-        letter-spacing: -.5px;
-      }
-      .hero-title .accent {
-        background: linear-gradient(90deg, var(--accent), #e09d61);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      .hero-card {
-        background: rgba(255,255,255,0.75);
-        box-shadow: 0 20px 40px rgba(0,0,0,.08);
-        border: 1px solid rgba(0,0,0,.06);
-        border-radius: 18px;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-      }
-      .hero-image {
-        max-height: 520px;
-        object-fit: cover;
-        border-radius: 22px;
-        box-shadow: 0 30px 60px rgba(0,0,0,.15);
-      }
-
-      /* Buttons */
-      .btn-custom {
-        background: linear-gradient(90deg, var(--primary), #3d8a57);
-        border: 1px solid rgba(0,0,0,.1);
-        border-radius: 999px;
-        padding: 12px 28px;
-        color: #fff;
-        font-weight: 700;
-        letter-spacing: .2px;
-        transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
-      }
-      .btn-custom:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(36,91,54,.35); color: #fff; }
-
-      /* Cards */
-      .dessert-card {
-        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-        border: 1px solid rgba(0,0,0,.08);
-        border-radius: 16px;
-        overflow: hidden;
-        background: var(--surface);
-      }
-      .dessert-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,.12); }
-      .dessert-image { height: 240px; object-fit: cover; }
-      .card-title { font-weight: 700; }
-      .badge-tag {
-        background: rgba(36,91,54,.08);
-        color: var(--primary);
-        border: 1px solid rgba(36,91,54,.2);
-      }
-
-      /* Sections */
-      .section-title {
-        color: var(--primary);
-        margin-bottom: 2.5rem;
-        letter-spacing: .2px;
-      }
-
-      /* Footer */
-      .footer {
-        background: radial-gradient(800px 400px at 100% -50%, #315f43 0%, transparent 60%),
-                    linear-gradient(135deg, #244434, #173427);
         color: white;
+      }
+      
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+      
+      .profile-image {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        border-radius: 16px;
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+      
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 3rem;
+        text-align: center;
+        color: #333;
+      }
+      
+      .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+      }
+      
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      }
+      
+      .skill-badge {
+        background: linear-gradient(45deg, #4DB298, #4D9AB2);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 25px;
+        margin: 5px;
+        display: inline-block;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      
+      .hobby-icon {
+        font-size: 3rem;
+        color: #4D9AB2;
+        margin-bottom: 1rem;
+        display: block;
+        text-align: center;
+      }
+      
+      .btn-primary {
+        background: linear-gradient(45deg, #4D9AB2, #4D67B2);
+        border: none;
+        border-radius: 25px;
+        padding: 12px 30px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(77, 154, 178, 0.3);
+        background: linear-gradient(45deg, #4D67B2, #4D9AB2);
+      }
+      
+      .btn-outline-primary {
+        border: 2px solid #4D9AB2;
+        color: #4D9AB2;
+        border-radius: 25px;
+        padding: 10px 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-outline-primary:hover {
+        background: #4D9AB2;
+        color: white;
+        transform: translateY(-2px);
+      }
+      
+      .footer {
+        background: #4D67B2;
+        color: white;
+        padding: 0;
+      }
+      
+      .footer-top {
+        background: #4D9AB2;
         padding: 3rem 0;
       }
-
-      .japanese-text {
-        font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
-        color: var(--accent);
+      
+      .footer-bottom {
+        background: #4DB298;
+        padding: 2rem 0;
+        text-align: center;
+      }
+      
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      
+      .social-icon {
+        width: 50px;
+        height: 50px;
+        background: #4DB298;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .social-icon:hover {
+        background: #4D9AB2;
+        transform: translateY(-3px);
+        color: white;
+      }
+      
+      .footer-nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      .footer-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+      }
+      
+      .footer-nav a:hover {
+        color: #4DB298;
+      }
+      
+      .footer-tagline {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+      }
+      
+      .footer-copyright {
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+      
+      .university-badge {
+        background: linear-gradient(45deg, #4D9AB2, #4DB298);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 500;
+        display: inline-block;
+        margin: 10px 0;
       }
     </style>
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <i class="fas fa-cookie-bite me-2"></i>KATAMI
+        <a class="navbar-brand" href="#home">
+          <i class="fas fa-code me-2"></i>Nyco Alec
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -142,13 +238,10 @@
               <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#desserts">Desserts</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
           </ul>
         </div>
@@ -160,141 +253,24 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <h1 class="display-4 fw-bold hero-title mb-4">
-              Discover the Art of <span class="japanese-text accent">和菓子</span>
-            </h1>
-            <p class="lead text-secondary mb-4">
-              Experience the delicate beauty and exquisite flavors of traditional Japanese desserts. 
-              Each creation is a masterpiece of taste and visual artistry.
+            <h1 class="hero-title">Hello, I'm</h1>
+            <h1 class="hero-title">Nyco Alec B. Balaogan</h1>
+            <h3 class="hero-subtitle">BSIT Student at Polytechnic University of the Philippines</h3>
+            <p class="lead mb-4">
+              Passionate developer with expertise in backend technologies (Python, PHP, C++) 
+              and frontend development (HTML, CSS). I love creating games, websites, and 
+              exploring new technologies.
             </p>
-            <a href="#desserts" class="btn btn-custom btn-lg">
-              <i class="fas fa-heart me-2"></i>Explore Our Collection
-            </a>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#about" class="btn btn-light btn-lg">
+                <i class="fas fa-user me-2"></i>About Me
+              </a>
+            </div>
           </div>
           <div class="col-lg-6 text-center">
-            <div class="position-relative p-2 hero-card d-inline-block">
-              <img src="https://images.unsplash.com/photo-1758779527969-7cd5972ed5bb?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                   alt="Japanese Desserts" 
-                   class="img-fluid hero-image" 
-                   style="object-fit: cover;">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Desserts Section -->
-    <section id="desserts" class="py-5">
-      <div class="container">
-        <h2 class="text-center section-title">Featured Japanese Desserts</h2>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="card dessert-card h-100">
-              <div class="dessert-image">
-                <img src="https://plus.unsplash.com/premium_photo-1700590072629-c051ca7ce0f3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Mochi" 
-                     class="w-100 h-100" 
-                     style="object-fit: cover;">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Mochi <span class="japanese-text">餅</span></h5>
-                <p class="card-text">Soft, chewy rice cakes filled with sweet red bean paste. A traditional favorite that melts in your mouth.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge rounded-pill badge-tag px-3 py-2">Traditional</span>
-                  <button class="btn btn-outline-success btn-sm">Learn More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card dessert-card h-100">
-              <div class="dessert-image">
-                <img src="https://images.unsplash.com/photo-1626497132810-f38eb29c5385?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Dorayaki" 
-                     class="w-100 h-100" 
-                     style="object-fit: cover;">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Dorayaki <span class="japanese-text">どら焼き</span></h5>
-                <p class="card-text">Golden pancake sandwiches filled with sweet azuki bean paste. A beloved treat for all ages.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge rounded-pill badge-tag px-3 py-2">Classic</span>
-                  <button class="btn btn-outline-success btn-sm">Learn More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card dessert-card h-100">
-              <div class="dessert-image">
-                <img src="https://images.unsplash.com/photo-1602030029545-52959ef2927c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Taiyaki" 
-                     class="w-100 h-100" 
-                     style="object-fit: cover;">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Taiyaki <span class="japanese-text">たい焼き</span></h5>
-                <p class="card-text">Fish-shaped waffles filled with sweet fillings. A popular street food that's both cute and delicious.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge rounded-pill badge-tag px-3 py-2">Street Food</span>
-                  <button class="btn btn-outline-success btn-sm">Learn More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card dessert-card h-100">
-              <div class="dessert-image">
-                <img src="https://images.unsplash.com/photo-1734041291024-15273c5a88fa?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Matcha Parfait" 
-                     class="w-100 h-100" 
-                     style="object-fit: cover;">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Matcha Parfait <span class="japanese-text">抹茶パフェ</span></h5>
-                <p class="card-text">Layered dessert with matcha ice cream, red beans, and mochi. A modern twist on traditional flavors.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge rounded-pill badge-tag px-3 py-2">Modern</span>
-                  <button class="btn btn-outline-success btn-sm">Learn More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card dessert-card h-100">
-              <div class="dessert-image">
-                <img src="https://images.unsplash.com/photo-1627308593413-3a3e02108920?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Wagashi" 
-                     class="w-100 h-100" 
-                     style="object-fit: cover;">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Wagashi <span class="japanese-text">和菓子</span></h5>
-                <p class="card-text">Traditional confections that change with the seasons. Each piece is a work of edible art.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge rounded-pill badge-tag px-3 py-2">Seasonal</span>
-                  <button class="btn btn-outline-success btn-sm">Learn More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card dessert-card h-100">
-              <div class="dessert-image">
-                <img src="https://images.unsplash.com/photo-1758779527956-0da4cd6ca77d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Anmitsu" 
-                     class="w-100 h-100" 
-                     style="object-fit: cover;">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Anmitsu <span class="japanese-text">あんみつ</span></h5>
-                <p class="card-text">Refreshing dessert with agar jelly, fruits, and sweet syrup. Perfect for warm weather.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge rounded-pill badge-tag px-3 py-2">Refreshing</span>
-                  <button class="btn btn-outline-success btn-sm">Learn More</button>
-                </div>
-              </div>
-            </div>
+            <img src="nyco.jpg" 
+                 alt="Nyco Alec B. Balaogan" 
+                 class="profile-image">
           </div>
         </div>
       </div>
@@ -303,77 +279,104 @@
     <!-- About Section -->
     <section id="about" class="py-5 bg-light">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h2 class="section-title">About KATAMI</h2>
-            <p class="lead">
-              KATAMI brings you the authentic taste of Japanese confectionery, carefully crafted 
-              using traditional techniques passed down through generations.
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title">About Me</h2>
+            <div class="university-badge">
+              <i class="fas fa-graduation-cap me-2"></i>
+              <strong>Polytechnic University of the Philippines - BSIT</strong>
+            </div>
+            <p class="lead mb-5">
+              I'm a dedicated BSIT student passionate about technology and development.
+              My journey in programming started with curiosity and has grown into a deep
+              love for creating digital solutions. Over time, I've developed strong skills 
+              in problem-solving, teamwork, and continuous learning.
+              I enjoy exploring new technologies, building projects that make a difference, 
+              and improving my knowledge in software development and system design.
+              My goal is to become a proficient developer who can contribute to innovative tech solutions 
+              that positively impact people's lives.
             </p>
-            <p>
-              Our name "KATAMI" (形見) means "keepsake" or "memento" - representing our commitment 
-              to preserving the beautiful traditions of Japanese dessert making while sharing 
-              these treasures with the world.
-            </p>
-            <div class="row text-center mt-4">
-              <div class="col-4">
-                <i class="fas fa-award fa-2x text-primary mb-2"></i>
-                <h6>Authentic</h6>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center p-4">
+                    <div class="hobby-icon">
+                      <i class="fas fa-film"></i>
+                    </div>
+                    <h5 class="card-title">Movie Marathon</h5>
+                    <p class="card-text">Love watching movies and series in my free time</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-4">
-                <i class="fas fa-heart fa-2x text-danger mb-2"></i>
-                <h6>Handcrafted</h6>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center p-4">
+                    <div class="hobby-icon">
+                      <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h5 class="card-title">Gaming</h5>
+                    <p class="card-text">Passionate about both playing and creating games</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-4">
-                <i class="fas fa-leaf fa-2x text-success mb-2"></i>
-                <h6>Natural</h6>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center p-4">
+                    <div class="hobby-icon">
+                      <i class="fas fa-book"></i>
+                    </div>
+                    <h5 class="card-title">Reading</h5>
+                    <p class="card-text">Always learning through books and online resources</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6 text-center">
-            <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                 alt="Traditional Japanese Wagashi" 
-                 class="img-fluid rounded-4 shadow-lg" 
-                 style="max-height: 400px; object-fit: cover;">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
       <div class="container">
-        <h2 class="text-center section-title">Visit Us</h2>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="card border-0 shadow">
-              <div class="card-body p-5">
-                <div class="row">
-                  <div class="col-md-6">
-                    <h5 class="mb-3">Get in Touch</h5>
-                    <p class="text-muted mb-3">
-                      <i class="fas fa-map-marker-alt me-2"></i>
-                      123 Sakura Street, Tokyo, Japan
-                    </p>
-                    <p class="text-muted mb-3">
-                      <i class="fas fa-phone me-2"></i>
-                      +81 3-1234-5678
-                    </p>
-                    <p class="text-muted mb-3">
-                      <i class="fas fa-envelope me-2"></i>
-                      info@katami-desserts.com
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <h5 class="mb-3">Opening Hours</h5>
-                    <p class="text-muted mb-1">Monday - Friday: 9:00 AM - 8:00 PM</p>
-                    <p class="text-muted mb-1">Saturday: 10:00 AM - 9:00 PM</p>
-                    <p class="text-muted mb-3">Sunday: 11:00 AM - 7:00 PM</p>
-                    <a href="#" class="btn btn-custom">
-                      <i class="fas fa-calendar me-2"></i>Make a Reservation
-                    </a>
-                  </div>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-4">
+                  <i class="fas fa-server me-2 text-primary"></i>
+                  Backend Development
+                </h4>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="skill-badge">Python</span>
+                  <span class="skill-badge">PHP</span>
+                  <span class="skill-badge">C++</span>
+                  <span class="skill-badge">MySQL</span>
                 </div>
+                <p class="card-text text-muted">
+                  Experienced in server-side programming and database management. 
+                  Comfortable with multiple programming languages and frameworks.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-4">
+                  <i class="fas fa-laptop-code me-2 text-primary"></i>
+                  Frontend Development
+                </h4>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="skill-badge">HTML</span>
+                  <span class="skill-badge">CSS</span>
+                  <span class="skill-badge">Bootstrap</span>
+                </div>
+                <p class="card-text text-muted">
+                  Skilled in creating responsive and interactive user interfaces. 
+                  Focus on clean, modern design and user experience.
+                </p>
               </div>
             </div>
           </div>
@@ -383,61 +386,48 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <h5 class="mb-3">
-              <i class="fas fa-cookie-bite me-2"></i>KATAMI
-            </h5>
-            <p class="text-light">
-              Bringing you the finest Japanese desserts with authentic flavors and traditional craftsmanship.
-            </p>
-            <div class="d-flex gap-3">
-              <a href="#" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
-              <a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-              <a href="#" class="text-light"><i class="fab fa-twitter fa-lg"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 mb-4">
-            <h6 class="mb-3">Menu</h6>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-light text-decoration-none">Mochi</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Dorayaki</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Taiyaki</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Wagashi</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-6 mb-4">
-            <h6 class="mb-3">Company</h6>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Our Story</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Careers</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <h6 class="mb-3">Newsletter</h6>
-            <p class="text-light mb-3">Subscribe for updates on new desserts and special offers.</p>
-            <div class="input-group">
-              <input type="email" class="form-control" placeholder="Your email">
-              <button class="btn btn-custom" type="button">Subscribe</button>
-            </div>
+      <div class="footer-top">
+        <div class="container">
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-tiktok"></i>
+            </a>
           </div>
         </div>
-        <hr class="my-4">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <p class="text-light mb-0">&copy; 2024 KATAMI. All rights reserved.</p>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-tagline">
+            Passionate Developer, Crafted with ❤️ in Philippines
           </div>
-          <div class="col-md-6 text-md-end">
-            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
-            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          <div class="footer-copyright">
+            © 2024 Nyco Alec B. Balaogan. All rights reserved.
           </div>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
